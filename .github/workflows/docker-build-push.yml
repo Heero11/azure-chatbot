@@ -25,7 +25,7 @@ jobs:
           context: .
           file: ./Dockerfile.backend
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/stage7-backend:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/azure-chatbot-backend:latest
 
       - name: Build and push chatbot
         uses: docker/build-push-action@v6
@@ -33,4 +33,4 @@ jobs:
           context: .
           file: ./Dockerfile.chatbot
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/stage7-chatbot:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/azure-chatbot:latest

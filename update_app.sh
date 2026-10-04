@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/azureuser/stage7
+cd /home/azureuser/azure-chatbot
 
 docker-compose pull
 docker-compose up -d

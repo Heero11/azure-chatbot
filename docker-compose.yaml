@@ -1,7 +1,7 @@
 ﻿services:
   chromadb:
     image: chromadb/chroma:latest
-    container_name: stage7-chromadb
+    container_name: azure-chatbot-chromadb
     ports:
       - "8000:8000"
 
@@ -9,7 +9,7 @@
     build:
       context: .
       dockerfile: Dockerfile.backend
-    container_name: stage7-backend
+    container_name: azure-chatbot-backend
     env_file:
       - .env
     ports:
@@ -21,7 +21,7 @@
     build:
       context: .
       dockerfile: Dockerfile.chatbot
-    container_name: stage7-chatbot
+    container_name: azure-chatbot
     env_file:
       - .env
     ports:
